@@ -1,13 +1,10 @@
-package com.cohad.multithreading.controller;
+package com.cohad.multithreading.executor;
 
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 import org.springframework.stereotype.Component;
-
-import com.cohad.multithreading.executor.Task;
 
 @Component
 public class ScheduledThreadPool {
