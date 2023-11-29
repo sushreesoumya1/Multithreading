@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cohad.multithreading.InterThreadCommunication.CustomLocks;
+import com.cohad.multithreading.executor.FixedThreadPool;
 import com.cohad.multithreading.executor.SingleThreadExecutor;
 
 
@@ -15,11 +16,17 @@ public class Cotroller {
 	CustomLocks customLocks;
 	@Autowired
 	SingleThreadExecutor singleThreadExecutor;
+	@Autowired
+	FixedThreadPool fixedThreadPool;
+	@Autowired
+	ScheduledThreadPool scheduledThreadPool;
 	
 	@GetMapping
 	public void operation() {
 		//customLocks.execute();
-		singleThreadExecutor.execute();
+		//singleThreadExecutor.execute();
+		//fixedThreadPool.execute();
+		scheduledThreadPool.execute();
 	}
 
 }
